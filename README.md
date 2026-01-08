@@ -9,6 +9,7 @@
 - **Detailed CVE reports** with CVSS scores and severity levels
 - **Severity filtering** (Critical, High, Medium, Low)
 - **Comprehensive summary** with overall risk assessment
+- **Cross-platform support** (Windows & Linux)
 
 ## 📋 Requirements
 
@@ -20,7 +21,14 @@
 
 ### Linux
 
-- ⏳ TODO - Implementation planned
+- **Python 3.8+**
+- **FastCVE-API** service running locally or accessible on your network
+- Root or sudo access to read package information
+- **Supported package managers:**
+  - dpkg (Debian/Ubuntu)
+  - rpm (RedHat/Fedora/CentOS)
+  - pacman (Arch Linux)
+  - apk (Alpine Linux)
 
 ## 🛠️ Installation
 
@@ -37,7 +45,14 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ### Linux
 
-- ⏳ TODO - Implementation planned
+```bash
+# Clone the repository
+git clone https://github.com/CobblePot59/CVEWatchdog.git
+cd CVEWatchdog
+
+# Install Python dependencies
+pip install requests
+```
 
 ## 🎯 Usage
 
@@ -62,7 +77,22 @@ Advanced options:
 
 ### Linux
 
-- ⏳ TODO - Implementation planned
+Basic usage:
+```bash
+python3 CVEWatchdog.py http://localhost:8000
+```
+
+Advanced options:
+```bash
+# Include wildcard CVEs (version = *)
+python3 CVEWatchdog.py http://localhost:8000 --wildcards
+
+# Enable debug mode to see name variations being tested
+python3 CVEWatchdog.py http://localhost:8000 --debug
+
+# Specify custom API URL
+python3 CVEWatchdog.py http://192.168.1.100:8080
+```
 
 ## 📊 Output
 
@@ -86,4 +116,4 @@ The script generates a structured report with:
 
 ## 🤝 Contributing
 
-Contributions are welcome! 
+Contributions are welcome!
