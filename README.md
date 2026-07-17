@@ -1,7 +1,3 @@
-# NEW : List apps -> cpe-guesser -> FastCVE-API -> SploitScan
-
-
-
 # CVEWatchdog 🔍
 
 **CVEWatchdog** is a cross-platform vulnerability scanner client for [FastCVE-API](https://github.com/CobblePot59/FastCVE-API) that identifies CVEs (Common Vulnerabilities and Exposures) on installed software.
